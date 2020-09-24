@@ -20,6 +20,7 @@ android {
         buildConfigField "String", "API_URL", '"https://newsapi.org/"'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -55,6 +56,7 @@ dependencies {
 
     //Material
     implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.guava:guava:20.0'
 
     // Retrofit
@@ -78,10 +80,17 @@ dependencies {
     implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha01'
     kapt 'androidx.hilt:hilt-compiler:1.0.0-alpha01'
 
+    //RxKotlin
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.2.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
     //Glide
     implementation 'com.github.bumptech.glide:glide:4.11.0'
 
     //Permission
     implementation 'com.karumi:dexter:6.0.0'
+
+    //Multidex
+    implementation 'com.android.support:multidex:1.0.3'
 
 }
