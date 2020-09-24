@@ -32,3 +32,13 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    junitVersion = '4.12'
+    espressoVersion = '3.1.0'
+    androidXTestVersion = '1.2.0'
+    mockitoVersion = '2.23.4'
+    archLifecycleVersion = '2.1.0'
+    mockitoKotlinVersion = '2.1.0'
+    idleResourceVersion = '3.2.0'
+}

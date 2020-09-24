@@ -10,8 +10,11 @@ import com.rio.news.R
 import com.rio.news.ui.adapter.NewsListAdapter
 import com.rio.news.utils.BaseApp
 import com.rio.news.utils.Status
+import com.rio.news.utils.hide
+import com.rio.news.utils.show
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.layout_error.*
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity(), BaseApp.Listener {
@@ -33,7 +36,10 @@ class MainActivity : AppCompatActivity(), BaseApp.Listener {
     override fun getIntentData() {}
 
     override fun setOnClick() {
-
+        tv_retry.setOnClickListener {
+            page = 1
+            loadData()
+        }
     }
 
     override fun setAdapter() {
@@ -77,16 +83,16 @@ class MainActivity : AppCompatActivity(), BaseApp.Listener {
                     Status.SUCCESS -> {
                         loading = false
                         srl_content.isRefreshing = false
+                        layout_error.hide()
                         nextPage = it.data!!.articles.isNotEmpty()
-                        if (page == 1){
-                            newsAdapter.setItems(it.data.articles)
-//                            if (it.data.isEmpty()) ly_empty.visibility = View.VISIBLE
-//                            else  ly_empty.visibility = View.GONE
-                        } else newsAdapter.addItems(it.data.articles)
+                        if (page == 1)newsAdapter.setItems(it.data.articles)
+                        else newsAdapter.addItems(it.data.articles)
                     }
                     Status.ERROR -> {
                         loading = false
                         srl_content.isRefreshing = false
+                        layout_error.show()
+                        tv_message.text = it.message
                     }
                 }
             }

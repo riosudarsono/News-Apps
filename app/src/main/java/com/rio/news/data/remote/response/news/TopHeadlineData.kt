@@ -12,7 +12,7 @@ class TopHeadlineData(
     var url: String?,
     var urlToImage: String?,
     var publishedAt: String?,
-    var content: String): Parcelable {
+    var content: String?): Parcelable {
 
     @Parcelize
     class Source(

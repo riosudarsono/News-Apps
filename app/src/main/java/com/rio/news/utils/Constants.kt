@@ -11,5 +11,7 @@ object Constants {
     const val DATA_EXTRA3 = "data_extra3"
 
     const val COUNTRY_US = "us"
+    const val COUNTRY_ID = "id"
+    const val CATEGORY_TECH = "technology"
     const val PAGE_SIZE = 5
 }
