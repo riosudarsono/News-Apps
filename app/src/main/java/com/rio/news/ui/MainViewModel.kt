@@ -13,8 +13,8 @@ import com.rio.news.utils.Resource
 class MainViewModel @ViewModelInject constructor(mainService: MainService) : ViewModel() {
     private val repo = MainRepository(mainService)
 
-    fun topHeadlines(page: Int): LiveData<Resource<BaseResponse<MutableList<TopHeadlineData>>>>
-            = repo.topHeadlines(page)
+    fun topHeadlines(query: String, page: Int, category: String): LiveData<Resource<BaseResponse<MutableList<TopHeadlineData>>>>
+            = repo.topHeadlines(query, page, category)
 
     override fun onCleared() {
         super.onCleared()

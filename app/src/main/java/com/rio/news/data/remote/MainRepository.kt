@@ -15,12 +15,12 @@ import io.reactivex.schedulers.Schedulers
 class MainRepository(private val mainService: MainService) {
     private val compositeDisposable = CompositeDisposable()
 
-    fun topHeadlines(page: Int): MutableLiveData<Resource<BaseResponse<MutableList<TopHeadlineData>>>>{
+    fun topHeadlines(query: String, page: Int, category: String): MutableLiveData<Resource<BaseResponse<MutableList<TopHeadlineData>>>>{
         EspressoIdlingResource.increment()
         val data = MutableLiveData<Resource<BaseResponse<MutableList<TopHeadlineData>>>>()
         data.value = Resource.loading(null)
 
-        mainService.topHeadlines(BuildConfig.API_KEY, Constants.COUNTRY_ID, Constants.CATEGORY_TECH, Constants.PAGE_SIZE, page)
+        mainService.topHeadlines(BuildConfig.API_KEY, Constants.COUNTRY_ID, category, Constants.PAGE_SIZE, page, query)
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
             .subscribe(

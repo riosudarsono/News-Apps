@@ -1,9 +1,11 @@
 package com.rio.news.ui.detail
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.rio.news.R
 import com.rio.news.data.remote.response.news.TopHeadlineData
+import com.rio.news.ui.webview.WebViewActivity
 import com.rio.news.utils.*
 import kotlinx.android.synthetic.main.activity_detail.*
 
@@ -29,7 +31,10 @@ class DetailActivity : AppCompatActivity(), BaseApp.Listener {
 
     override fun setOnClick() {
         iv_back.setOnClickListener { onBackPressed() }
-        tv_url.setOnClickListener { Utils.openLink(data?.url!!, this) }
+        tv_url.setOnClickListener {
+            val i = Intent(this, WebViewActivity::class.java)
+            i.putExtra(Constants.DATA_EXTRA, data?.url)
+            startActivity(i) }
     }
 
     override fun setAdapter() {}

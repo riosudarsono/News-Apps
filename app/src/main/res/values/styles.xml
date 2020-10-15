@@ -12,4 +12,18 @@
         <item name="android:textColor">@color/md_black_1000</item>
     </style>
 
+    <style name="ProgressBarPrimary" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/bg_progressbar_primary</item>
+        <item name="android:minHeight">10dip</item>
+        <item name="android:maxHeight">20dip</item>
+    </style>
+
+    <style name="CustomSearch" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:textColorSecondary">@android:color/black</item>
+        <item name="android:textColorHint">@color/md_grey_600</item>
+        <item name="android:color">@android:color/black</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:editTextColor">@android:color/black</item>
+    </style>
 </resources>

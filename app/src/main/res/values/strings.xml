@@ -1,14 +1,23 @@
 <resources>
     <string name="app_name">News</string>
-    <string name="news_top_headlines">News Top Headlines</string>
-    <string name="title_news">Title News</string>
+    <string name="news_top_headlines">Berita Terbaru</string>
+    <string name="title_news">Judul berita</string>
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
     <string name="lorem_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
-    <string name="detail_news">Detail News</string>
-    <string name="data_empty">Data Empty</string>
-    <string name="date">Date</string>
-    <string name="description">Description</string>
-    <string name="open_url">Open URL</string>
+    <string name="detail_news">Detail Berita</string>
+    <string name="data_empty">Data Tidak Tersedia</string>
+    <string name="date">Tanggal</string>
+    <string name="description">Deskripsi</string>
+    <string name="open_url">Buka Berita</string>
     <string name="author">Author</string>
     <string name="retry">Retry</string>
+    <string name="business">Bisnis</string>
+    <string name="entertainment">Hiburan</string>
+    <string name="general">Umum</string>
+    <string name="health">Kesehatan</string>
+    <string name="science">Sains</string>
+    <string name="sports">Olahraga</string>
+    <string name="technology">Teknologi</string>
+    <string name="kategori_berita">Kategori Berita</string>
+    <string name="berita_">Berita %s</string>
 </resources>

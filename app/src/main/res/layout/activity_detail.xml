@@ -19,7 +19,7 @@
                     android:id="@+id/iv_back"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_back_black"
+                    app:srcCompat="@drawable/ic_back_black"
                     android:padding="@dimen/dp_16"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -50,7 +50,7 @@
                         android:id="@+id/iv_image"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/ic_image_grey"
+                        app:srcCompat="@drawable/ic_image_grey"
                         android:scaleType="centerCrop"/>
                     <TextView
                         android:id="@+id/tv_title"

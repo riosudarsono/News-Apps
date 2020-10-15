@@ -13,14 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="@dimen/dp_16">
-        <ImageView
-            android:id="@+id/iv_image"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            app:srcCompat="@drawable/ic_image_grey"
-            android:scaleType="centerCrop"/>
         <TextView
-            android:id="@+id/tv_title"
+            android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="@string/title_news"
@@ -28,17 +22,11 @@
             android:textStyle="bold"
             android:maxLines="1"
             android:layout_marginHorizontal="@dimen/dp_8"
-            android:layout_marginVertical="@dimen/dp_4"
-            android:layout_toRightOf="@id/iv_image" />
-        <TextView
-            android:id="@+id/tv_desc"
-            android:layout_width="match_parent"
+            android:layout_marginVertical="@dimen/dp_4"/>
+        <ImageView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/lorem"
-            android:maxLines="2"
-            android:layout_toRightOf="@id/iv_image"
-            android:layout_below="@id/tv_title"
-            android:layout_marginHorizontal="@dimen/dp_8"/>
-
+            app:srcCompat="@drawable/ic_arrow_right_black"
+            android:layout_alignParentRight="true"/>
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
